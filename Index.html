@@ -1,0 +1,121 @@
+<!-- Ayron Strensk RGA 201511640009-->
+<!doctype html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>Prova</title>
+    <link rel="stylesheet" type="text/css" href="prova1.css">
+	<script src="prova1.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="principal">
+    
+        <div id="cabeça">
+            <div id="cab_dir">
+                <div id="logo">
+                    <img src="imagens/logo.png" width="48px" height="49px" id="imglog">
+                </div>
+                <div id="texlog">
+                	<h2> Farmacia UFMT</h2>
+                </div>
+            </div>
+            <div id="cab_esq">
+                <ul>
+                <a href="Index.html"><li id="pass_mouse_inicio" onmouseover="mudarmenu(this.id)" onmouseout="voltarmenu(this.id)">INICIO</li></a>
+                <a href="Index.html"><li id="pass_mouse_sobre" onmouseover="mudarmenu(this.id)" onmouseout="voltarmenu(this.id)">SOBRE</li></a>
+                <a href="contato/contatos.html"><li id="pass_mouse_contato" onmouseover="mudarmenu(this.id)" onmouseout="voltarmenu(this.id)">CONTATO</li></a>
+                </ul>
+            </div>
+        </div>
+        <div id="corpo">
+            <div id="corp_esq">
+                <div id="esq_tex">
+                        <h3> PROTEJA-SE DO SOL</h3>
+                 </div>
+                <a href="#"> <div id="esq_foto1"> <!-- Neste item estou utilisando a expecificação que deveria ser ao lado -->
+                 	<div id="tex1">
+                    	<span>Descubra porque usar UV.LINE</span>
+                    </div>
+                 	<div id="img1">
+                    	<img src="imagens/uvline.jpg" width="140px">
+                    </div>
+                  </div></a>
+                 <a href="#"><div id="esq_foto2">
+                  	<div id="tex2">
+                    	<span> Confira o melhor filtro solar.</span>
+                    </div>
+                    <div id="img2">
+                    	<img src="imagens/bannerAdatina.jpg" width="140px">
+                        
+                    </div>
+                     </div></a>
+            	</div>
+            <div id="corp_dir">
+           	  <div id="caixatex">
+                	<h3>5 dicas para você emagrecer</h3>
+                    <ol>
+                    	<li>Coma a cada três horas</li>
+                        <span>Jejuns longos fazem o corpo queimar mais massa muscular e armazenar tecido gorduroso.</span>
+                        <li>Aposte nas frutas</li>
+                        <span>Coma de três a seis frutas por dia</span>
+                        <li>Coma saladas antes da refeição</li>
+                        <span>Invista em salada antes da refeição – isso evita exagerar no prato principal.</span>
+                        <li>Fique longe de frituras</li>
+                        <span>Em vez de atacar as frituras, opte por alimentos assados e cozidos.</span>
+                        <li> Prefira 1 carboidrato</li>
+                        <span>Não coma mais de um carboidrato (arroz, massa, batata) por refeição.</span>
+                    </ol>
+                </div>
+                
+            </div>
+        </div>
+        <div id="pe">
+            <div class="pe_alin">
+                <form action="Index.html" method="get" >
+                     <input type="button" name="botao1" value="VER MAIS" id="botao1" onClick="texto_esc1()">     
+                </form> 
+                <div id="pe_prod1" class="pe_prod">
+                </div>
+            </div>
+            <div class="pe_alin">
+                <form action="Index.html" method="get" onClick="texto_esc2()">
+                     <input type="button" name="botao2" value="VER MAIS" id="botao2">
+                     
+                </form> 
+                <div id="pe_prod2" class="pe_prod">
+                </div>
+            </div>
+            <div class="pe_alin">
+                <form action="cadastro/cadastro.html" method="get">
+                    <input type="submit" name="botao3" value="Cadastrar-se" id="botao3">
+                </form>
+                <div id="pe_prod3" class="pe_prod">
+                </div>
+            </div>
+            <div id="tex_esc1">
+            	<p>Oli Ola é considerado uma inovação no ramo de nutricosméticos. Sua fórmula possui agente que promove um peeling natural na tez, deixando-a mais bonita sem agredi-la, como ocorre com tratamentos tradicionais.</p> <h4> Saiba Mais em:</h4> <a href="http://www.oli-ola.org/"><h3> oli-ola.org </h3></a>
+            </div>
+            <div id="tex_esc2">
+            	<ol>
+                	<li> Alimente-se bem.</li>
+                    	<span>A alimentação é a base de tudo, e uma dieta balanceada pode garantir a sua saúde. Consulte um nutricionista e verifique qual é a dieta indicada para você.</span>
+                    <li>Consulte o seu dentista!</li>
+                    	<span>Muitos problemas de saúde provêm da falta de cuidado com a saúde bucal. Visite o seu dentista regularmente</span>
+                     
+                </ol>
+                <a href="http://superimperial.com.br/site/2017/04/06/7478/"><h4>Continua...</h4></a>
+            </div>
+        </div>
+        <div id="rodape" onclick="trocar()">
+                 <img src="imagens/capula.jpg" width="800px" height="60px" id="rod_img">  
+                
+                    <h3 id="texrodape"> Site desenvolvido por Ayron Strensk RGA 20151164009 como parte da avaliação da disciplina Programaçãoem Ambiente Web I. Sistemas de Informação – Rondnópolis – 2016.2”</h3>   
+                
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+/* Ayron Strensk RGA 201511640009 */
+body{
+	width:800px;
+	height:600px;
+	margin:0px;
+}
+#principal
+{
+	width:800px;
+	height:600px;
+	margin:0px;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background-image:url(imagens/planodefundo.jpg);
+	background-repeat:repeat;
+}
+#cabeça
+{
+	width:800px;
+	height:70px;
+	margin-top:10px;
+}
+
+#rodape
+{
+	width:800px;
+	height:65px;
+    position:absolute;
+    bottom: 0px;
+}
+#cab_esq
+{
+	width:300px;
+	height:50px;
+	background-color:#5F67EC;
+	border:1px solid #012DFF;
+	border-radius:0px 5px 5px 0px;
+	position:fixed;
+	top:10px;
+}
+#cab_dir
+{
+	width:400px;
+	height:50px;
+	background-color:#5F67EC;
+	border:1px solid #012DFF;
+	border-radius:5px 0px 0px 5px;
+	float:right;
+	display:inline;
+}
+#cab_esq li
+{
+    text-align: center;
+	list-style-type:none;
+	display:inline-block;
+	margin-left:5px;
+	text-decoration:none;
+	color:#FFF;
+}
+
+#logo
+{
+	float:left;
+	margin-left:20px;
+}
+#texlog
+{
+	margin:auto;
+	width:50%;
+	margin-top:-5px;
+	color:#FFFFFF;
+}
+
+#corp_dir
+{
+	width:380px;
+	height:250px;
+	float:right;
+	margin-right:5px;
+}
+#caixatex
+{
+	width:95%;
+	height:95%;
+	margin:auto;
+	background-color:#E9E8E8;
+	border:3px solid #AAA;
+	border-radius: 20px;
+	box-shadow:#AAA 2px 2px 5px,#AAA 2px -2px 5px,#AAA -2px 2px 5px,#AAA -2px 2px 5px;
+	text-align:center;
+	font-size:12px;	
+}
+#texrodape
+{
+	text-shadow:#000 1px 2px 1px,#000 1px -1px 1px,#000 2px 1px 1px,#000 -1px 1px 1px;
+	color:white;
+	text-align:center;
+	font-size:15px;
+}
+#texrodape
+{
+    width: 800px;
+	position:relative;
+	bottom:60px;
+}
+#corpo
+{
+	background-color:rgba(255,255,255,0.9);
+	border:10px solid lightgray;
+	border-radius:15px;
+	width:50%;
+	margin:auto;
+	text-align:center;
+}
+a
+{
+	text-decoration:none;
+	color:black;
+}
+a:hover
+{
+	text-decoration:none;
+	color:blue;
+}

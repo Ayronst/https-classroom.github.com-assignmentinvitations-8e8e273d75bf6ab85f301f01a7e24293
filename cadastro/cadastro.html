@@ -1,0 +1,191 @@
+<!-- Ayron Strensk RGA 201511640009-->
+<!doctype html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>Cadastro</title>
+    <link rel="stylesheet" type="text/css" href="cadastrop1.css">
+    <script type="text/javascript">
+         
+		 function trocar()
+         {
+            
+            document.getElementById("rod_img").src="imagens/capsula1.jpg";
+				
+         }
+		 function carregar()
+		 {
+			 document.getElementById("corpo").style.display = "none";
+			 document.getElementById("loading").style.display = "block";
+			 return false;
+		 }
+		 function maiusculo(esse)
+		 {
+    		var texto = document.getElementById(esse);
+    		texto.value = texto.value.toUpperCase();
+		 }
+		 
+		 function verifica(esse)
+		 {
+			 var elemento = document.getElementById(esse);
+			 if (elemento.value =="" || elemento.value == null)
+			 {
+				elemento.style.backgroundColor = "red";
+			 }
+			 else
+			 {
+				elemento.style.background = "lightgreen";
+				elemento.style.border = "green";
+			 }
+		 } 
+		 
+		 function conferir()
+		 {
+			 var erros=0;
+			 obj =[
+			 curso = document.getElementById("cad_cur"),
+			 intituicao = document.getElementById("cad_instituicao"),
+			 rua = document.getElementById("cad_end_rua"),
+			 bairro = document.getElementById("cad_end_bairro"),
+			 numero = document.getElementById("cad_end_numero")];
+			 
+				for (i=0;i<obj.length;i++)
+				{
+					
+					 if (obj[i].value == "" || obj[i].value == null)
+					 {
+						 erros++;
+						 erro("erro",obj[i]);
+						 
+					 }
+					 else
+					 {
+						 acerto("acerto",obj[i]);
+					 }
+				}
+				
+				if (erros == 0)
+				{
+					carregar();
+				}
+				else
+				{
+					window.alert("preencha os campos em vermelho");
+					
+				}
+
+			return false;
+		 }
+		 
+		 
+		 	function acerto(clas,id)
+			{
+				id.className = clas;
+			}
+		 	function erro(clas,id)
+		 	{
+				 id.className = clas;
+			 }
+		function mudarmenu(menu)
+		 {
+			document.getElementById(menu).style.background = "white";
+			document.getElementById(menu).style.color = "blue";
+			document.getElementById(menu).style.fontFamily = "aladin";
+		 }
+		 function voltarmenu(menu)
+		 {
+			 document.getElementById(menu).style.background = "none";
+    		 document.getElementById(menu).style.color = "white";
+			 document.getElementById(menu).style.fontFamily = "Arial";
+		 }
+ 
+    </script>
+</head>
+
+<body>
+    <div id="principal">
+        <div id="cabeça">
+            <div id="cab_dir">
+                <div id="logo">
+                    <img src="imagens/logo.png" width="48px" height="49px" id="imglog">
+                </div>
+                <div id="texlog">
+                	<h2> Farmacia UFMT</h2>
+                </div>
+            </div>
+            <div id="cab_esq">
+                <ul>
+                <a href="../Index.html"><li id="pass_mouse_inicio" onmouseover="mudarmenu(this.id)" onmouseout="voltarmenu(this.id)"><li>INICIO</li></a>
+                <a href="../Index.html"><li id="pass_mouse_sobre" onmouseover="mudarmenu(this.id)" onmouseout="voltarmenu(this.id)"><li>SOBRE</li></a>
+                <a href="../contato/contatos.html"> <li id="pass_mouse_contato" onmouseover="mudarmenu(this.id)" onmouseout="voltarmenu(this.id)" ><li>CONTATO</li></a>
+                </ul>
+            </div>
+        </div>  
+            <div id="corpo">
+            	<form action="cadastro.html" method="get" id="cad" onSubmit="return conferir()" >
+                <div id="topo">
+                    <label>Curso:</label>
+   <input type="text" name="curso" id="cad_cur" placeholder="Sistemas da Informação" maxlength="50" onChange="maiusculo(this.id)" onBlur="verifica(this.id)">
+                    <label>Instituição:</label>
+                    <input type="text" name="intitu" id="cad_instituicao" placeholder="UFMT" maxlength="6" onChange="maiusculo(this.id)" onBlur="verifica(this.id)">
+                </div>
+            
+                <div id="meio">
+                    <label>Sexo:</label><label id="sex_mas">Masculino:</label>
+                                        <input type="radio" name="sexo" id="cad_sex_m" ><br>
+                                        <label id="sex_fem">Feminino:</label>
+                                        <input type="radio" name="sexo" id="cad_sex_f">
+                </div>
+                
+                <div id="baixo">
+                    
+                <label>Endereço:</label><br><label>Rua:</label><input type="text" name="Rua" id="cad_end_rua" onChange="maiusculo(this.id)" onBlur="verifica(this.id)">
+                                        <label>Numero:</label>
+                                        <input type="text" name="Numero" id="cad_end_numero" onChange="maiusculo(this.id)" onBlur="verifica(this.id)">
+                                        <label>Bairro:</label><input type="text" name="Bairro" id="cad_end_bairro" onChange="maiusculo(this.id)" onBlur="verifica(this.id)">
+                                        
+                   
+                <label>Cidade:</label> <select name="Cidade" id="cad_end_cid" onBlur="verifica(this.id)">
+                                            <option>Rondonópolis</option>
+                                            
+                                            <option>Manaus</option>
+                                            
+                                            <option>Rio de Janeiro</option>
+                                            
+                                            <option>Curitiba</option>
+                                            
+                                            <option>Fortaleza</option>
+                                        </select>
+                 <label>UF:</label> <select name="estado" id="cad_end_est" onBlur="verifica(this.id)">
+                 						<optgroup label="Centro Oeste"></optgroup>
+                                        <option>MT</option>
+                                        <optgroup label="Norte"></optgroup>
+                                        <option>AM</option>
+                                        <optgroup label="Sudeste"></optgroup>
+                                        <option>RJ</option>
+                                        <optgroup label="Sul"></optgroup>
+                                        <option>PR</option>
+                                        <optgroup label="Nordeste"></optgroup>
+                                        <option>CE</option>
+                                    </select>
+                 <div id="botao">
+					<input type="submit" name="botao" value="Cadastrar">              
+                </div>
+                </div>
+            </form>
+            </div>
+            <div id="loading">
+	            <img src="imagens/loading.gif" width="400px">
+            </div>                         
+        
+        
+        <div id="rodape" onclick="trocar()">
+                 <img src="imagens/capula.jpg" width="800px" height="60px" id="rod_img">   
+                <div>
+                    <h3 id="texrodape"> Site desenvolvido por Ayron Strensk RGA 20151164009 como parte da avaliação da disciplina Programaçãoem Ambiente Web I. Sistemas de Informação – Rondnópolis – 2016.2”</h3>   
+                </div>
+        </div>
+    </div>  
+</body>
+</html>
